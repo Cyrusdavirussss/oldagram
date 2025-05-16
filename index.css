@@ -1,0 +1,166 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ========================
+   1. Base + Global Styles
+   ======================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    background-color: #fff;
+}
+
+/* Global container layout */
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 12px;
+    
+}
+
+.app-wrapper {
+    width: 375px;
+    margin: 20px auto;
+    padding: 10px 0;
+    border: 5px solid black;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* ========================
+   2. Header
+   ======================== */
+.site-header {
+    background-color: #FFFFFF;
+    padding: 5px 0 25px;
+}
+
+/* Header-specific container layout */
+.site-header .container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.logo {
+    width: 127px;
+}
+
+.avatar {
+    width: 34px;
+    border-radius: 50%;
+}
+
+
+/* ========================
+   3. Post Layout
+   ======================== */
+   
+.post-with-divider {
+     border-bottom: 1px solid #C6C6C6;
+     padding: 5px 0;
+   }
+
+/* Top of post: user info */
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    gap: 10px;
+   
+}
+
+.post-user-info h2 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.post-user-info p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Post image */
+.post-img {
+    display: block;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+
+/* ========================
+   4. Post Actions (Icons)
+   ======================== */
+.post-icons {
+    display: flex;
+    gap: 10px;
+    width: 104.34px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+.post-icons img {
+    cursor: pointer;
+    display: block;
+}
+
+.post-icons img {
+    width: 23px;
+}
+
+.post-icons img:hover,
+.post-icons img:focus {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.post-icons img:active {
+    transform: scale(0.9);
+    filter: brightness(0.6);
+}
+
+.post-icons img {
+    transition: all 0.2s ease;
+}
+/* ========================
+   5. Post Metadata (Likes & Caption)
+   ======================== */
+.post-meta {
+    padding: 5px 0;
+    text-align: left;
+}
+
+.post-meta p {
+    margin: 0 0 10px 0;
+    font-size: 13px; 
+}
+
+.likes, .username {
+    font-weight: bold;
+}
+
+/* CSS code for JS functionality */
+
+.liked {
+    filter: invert(22%) sepia(93%) saturate(4590%) hue-rotate(-8deg) brightness(93%) contrast(105%);
+    transition: filter 0.2s ease;
+}
+
+.commented {
+    filter: invert(60%) sepia(25%) saturate(4000%) hue-rotate(85deg) brightness(95%) contrast(90%);
+    transition: filter 0.2s ease;
+}
+
+.shared {
+    filter: invert(36%) sepia(80%) saturate(1200%) hue-rotate(180deg) brightness(95%) contrast(100%);
+    transition: filter 0.2s ease;
+}
